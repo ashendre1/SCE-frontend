@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:8000';
+const API_BASE_URL = 'http://cci-ci-test.charlotte.edu:8000';
 
 export const signup = async (email, password) => {
     const response = await fetch(`${API_BASE_URL}/signup`, {
