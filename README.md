@@ -1,3 +1,6 @@
+SCE-frontend
+
+
 Instructions to run the project
 
 1) Clone the git repo
