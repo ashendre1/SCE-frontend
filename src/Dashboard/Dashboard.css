@@ -1,0 +1,194 @@
+/* General Layout */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Prevent scrolling of the entire page */
+  font-family: Arial, sans-serif;
+}
+
+/* Header Styling */
+.header {
+  height: 60px;
+  background-color: #005035;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+  display: flex;
+  height: calc(100vh - 60px); /* Full height minus header */
+  overflow: hidden;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 250px;
+  padding: 20px;
+  color: black;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar li:hover {
+  background-color: #005035;
+  color: white;
+}
+
+.sidebar li.selected {
+  background-color: #005035;
+  font-weight: bold;
+  color: white;
+}
+
+/* Main Content Styling */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto; /* Only this area scrolls */
+  height: 100%; /* Take full remaining height */
+  box-sizing: border-box;
+}
+
+.main-content h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.main-content h2 {
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+/* Custom Graph Controls */
+.custom-graph-controls {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 80px;
+}
+
+.custom-graph-controls label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.custom-graph-controls select {
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-graph-controls select:focus {
+  border-color: #007377;
+  box-shadow: 0 0 5px rgba(0, 115, 119, 0.5);
+}
+
+.student-persona-info h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.student-persona-info h3:hover {
+  color: #A49665; /* Optional: Change color on hover */
+}
+
+.student-persona-info h3 span:last-child {
+  margin-left: auto; 
+  padding-right: 150px;
+}
+
+.student-persona-info p,
+.student-persona-info ul,
+.student-persona-info li {
+  padding-right: 150px; /* Add padding to the right for all text elements */
+}
+
+.generate-graphs-button {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #005035;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.generate-graphs-button:hover {
+  transform: scale(1.05);
+}
+
+.generate-graphs-button:active {
+  background-color: #004f4f;
+  transform: scale(1);
+}
+
+.student-persona-info {
+  text-align: left; /* Align text to the left */
+  padding-left: 20px; /* Add padding from the sidebar */
+  margin-left: 100px; /* Adjust this value to match the sidebar width */
+}
+
+.dashboard-container h2 {
+  color: black; /* Set text color to black */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .custom-graph-controls {
+    flex-direction: column;
+    gap: 15px;
+    
+  }
+
+  .sidebar {
+    width: 200px;
+  }
+
+  .main-content {
+    padding: 15px;
+  }
+}

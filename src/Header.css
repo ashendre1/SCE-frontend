@@ -1,0 +1,30 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #005035;
+    color: white;
+    position: relative;
+    height: 100px;
+  }
+  
+  .header h1 {
+    margin: 0;
+  }
+  
+  .logout-button {
+    position: absolute;
+    right: 20px;
+    background-color: #A49665; /* Golden background color */
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .logout-button:hover {
+    background-color: #A49665; /* Darker shade of golden for hover effect */
+  }
